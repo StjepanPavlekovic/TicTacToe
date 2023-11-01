@@ -27,6 +27,9 @@ const gameManager = (function () {
     if (!playerTurn) return false;
 
     var madeMove = handleMove(id, playerMoves);
+    if (!madeMove) {
+      return null;
+    }
     playerTurn = false;
 
     return madeMove;
